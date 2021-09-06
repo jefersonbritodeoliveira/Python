@@ -13,7 +13,7 @@ def diminuir (a,b):
 
 print(calcular(264,4,5))
 print(diminuir(4,20))
-
+print(diminuir(5,50))
 
 
 
