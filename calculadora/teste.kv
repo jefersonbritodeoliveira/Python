@@ -1,0 +1,68 @@
+
+<Botaotamanho@Button>:
+    font_size:30
+    background_color:'red'
+    
+<MyLayout>:
+    BoxLayout:
+        orientation: 'vertical'
+        size: root.width, root.height
+        GridLayout:		
+            cols: 2
+            rows: 1
+            Botaotamanho:
+                id: bot 
+                text:'ainda não foi pressionado'
+                on_release:root.soltei(None)
+                on_press:root.apertando(None)
+                
+            Botaotamanho:
+                id:mensagem
+                text: 'linha 1'
+                background_color:'yellow'
+
+        BoxLayout:
+            orientation: 'vertical'
+            GridLayout:		
+                cols: 2
+                rows: 1
+                Botaotamanho:
+                    text:'linha 2'
+                    background_color:'blue'
+                TextInput:
+                    id:saida
+                    size_hint: (1, .15)
+                    text: 'saida'
+                    background_color:'blue'
+                          
+            BoxLayout:
+                orientation: 'vertical'
+                GridLayout:		
+                    cols: 2
+                    rows: 1
+                    Button:
+                        size_hint: (1, .15)
+                        text:'click'
+                        background_color:'red'
+                        on_press:root.escreve(None)
+                    Button:
+                        text: 'linha 3'
+                        background_color:'red'        
+                BoxLayout:
+                    orientation: 'vertical'
+                    GridLayout:		
+                        cols: 6
+                        rows: 1
+                        Button:
+                            text:'linha 4a'
+                        Button:
+                            text: 'linha 4b'
+                        Button:
+                            text: 'linha 4c'
+                        Button:
+                            text:'linha 4d'
+                        Button:
+                            text: 'linha 4e'
+                        Button:
+                            text: 'linha 4f'   
+                                 

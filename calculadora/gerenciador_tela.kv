@@ -1,0 +1,60 @@
+<Gerenciador>:
+    Primeira_Tela:
+    Segunda_Tela:
+    Terceira_Tela:
+    
+
+<Primeira_Tela>:
+    name:'primeira'
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+
+        Label:
+            text: 'Primeira tela'
+            font_size: 32
+        Button:
+            text: 'vai para a segunda tela'
+            font_size:32
+            on_release:
+                app.root.current = 'segunda'
+                root.manager.transition.direction ='down'
+
+<Segunda_Tela>:
+    name:'segunda'
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+
+        Label:
+            text: 'Segunda tela'
+            font_size: 32
+        Button:
+            text: 'vai para a terceira tela'
+            font_size:32
+            on_release:
+                app.root.current = 'terceira'
+                root.manager.transition.direction ='right'
+    
+<Terceira_Tela>:
+    name:'terceira'
+    BoxLayout:
+        orientation:'vertical'
+        size: root.width, root.height
+
+        Label:
+            text: 'Terceira tela'
+            font_size: 32
+        Button:
+            text: 'voltar para a primeira tela'
+            font_size:32
+            on_release:
+                app.root.current = 'primeira'
+                root.manager.transition.direction ='up'
+        Button:
+            id:terceiro_botão
+            text: 'encerrar programa'
+            font_size:32
+            on_press:app.stop()
+              
+              
