@@ -6,9 +6,7 @@ def calcular(*args):
 
 def diminuir (a,b):
     resultado= a-b
-    while resultado < 50:
-        print(resultado) 
-    return resultado
+    return resultado + 25
 
 
 print(calcular(264,4,5))
